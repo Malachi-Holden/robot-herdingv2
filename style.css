@@ -1,0 +1,137 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+div {
+  padding:5px;
+  margin:5px;
+}
+
+.instructions {
+  width: 45em;
+  margin: auto;
+}
+
+.instructions h1,.instructions p {
+  padding: 5px 0 0 0;
+  margin: 0;
+  text-align: center;
+}
+
+
+#board {
+  height: 700px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  margin: 5px;
+}
+
+#goal {
+  height: 350px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  border: solid;
+}
+
+#goal h1{
+  font-size: 15px;
+  padding: 0;
+}
+
+.consoles{
+  display: flex;
+}
+
+.ui {
+  display: flex;
+  flex-direction: column;
+}
+
+.row, .column {
+  padding:0;
+  margin:0;
+}
+
+.row {
+  display: flex;
+  flex-grow: 1;
+}
+
+.column {
+  display: flex;
+  flex-grow: 1;
+  border: solid;
+  position: relative;
+}
+
+.column img{
+  position: relative;
+}
+
+.column h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.game {
+  display: flex;
+}
+
+@media screen and (max-width: 1650px) {
+  .game {
+    flex-direction: column;
+  }
+}
+
+.console {
+  display: flex;
+  flex-direction: column;
+}
+
+.labels {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.labels h4 {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+#counter {
+  margin: auto 10px auto 10px;
+  border-style:  solid;
+  border-width: thin;
+  text-align: center;
+  padding: 3px;
+}
+
+#score {
+  margin: auto 10px auto 10px;
+  border-style:  solid;
+  border-width: thin;
+  text-align: center;
+  padding: 3px;
+}
+
+form {
+  border-style: solid;
+  padding: 5px;
+  margin: 3px;
+}

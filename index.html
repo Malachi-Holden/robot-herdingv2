@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Herding Robots</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" >
+  <script type="text/javascript" src="conf.js"></script>
+  <script type="text/javascript" src="goal.js"></script>
+  <script type="text/javascript" src="robots.js" defer></script>
+  <script type="text/javascript" src="index.js" defer></script>
+</head>
+
+
+<body>
+  <div class="instructions">
+    <h1>Herding Robots</h1>
+    <p>
+      Ever tried herding robots? Probably easier than herding cats.
+    </p>
+    <p>
+      To rotate robots, go to the rotation panel and select a color or a number (or both!). Then, select how far you want the robots to rotate (clockwise). All robots that match this color or number will rotate.
+    </p>
+    <p>
+      To move robots, go to the rotation panel and select a color or a number. Then, select how far you want the robots to move. All robots that match this color or number will move forward.
+    </p>
+    <p>
+      Can you get the robots to line up as shown on the goal?
+    </p>
+  </div>
+  <h3> Game board:</h3>
+  <div class="game">
+    <div id="board">
+      <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+      <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+      <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+      <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+      <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+
+
+    </div>
+    <div class="ui">
+    <div class="consoles">
+      <div class="console">
+        <form id="move" method="post">
+          <h4>Move the robots!</h4>
+          Color:
+            <select autocomplete="off">
+              <option value="">no color</option>
+              <option value="red">red</option>
+              <option value="blue">blue</option>
+              <option value="green">green</option>
+              <option value="yellow">yelow</option>
+            </select><br>
+            Number:<select autocomplete="off">
+              <option value="-1">no number</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select><br>
+          Squares to move:<select autocomplete="off">
+            <option value="0">0 squares</option>
+            <option value="1">1 square</option>
+            <option value="2">2 squares</option>
+            <option value="3">3 squares</option>
+            <option value="4">4 squares</option>
+          </select><br>
+          <input type="submit" value="Move!">
+        </form>
+        <div class="labels">
+          <h4> Number of actions so far:</h4>
+          <p id="counter"></p>
+        </div>
+        <h3>Your goal:</h3>
+          <div id="goal">
+            <div class="row">
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+            </div>
+            <div class="row">
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+            </div>
+            <div class="row">
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+            </div>
+            <div class="row">
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+            </div>
+            <div class="row">
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+            </div>
+
+
+          </div>
+      </div>
+      <div class="console">
+
+        <form id="rotate" method="post">
+          <h4>Rotate the robots!</h4>
+        Color:
+          <select autocomplete="off">
+            <option value="">no color</option>
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="green">green</option>
+            <option value="yellow">yelow</option>
+          </select><br>
+          Number:<select autocomplete="off">
+            <option value="-1">no number</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select><br>
+          Rotation:<select autocomplete="off">
+            <option value="0">0 degrees</option>
+            <option value="90">90 degrees</option>
+            <option value="180">180 degrees</option>
+            <option value="270">270 degrees</option>
+          </select><br>
+          <input type="submit" value="Rotate!">
+        </form>
+        <button onclick="restart()">Restart the game</button>
+        <button onclick="newGoal()">Reset the goal</button>
+        <button onclick="displayScore()">Update score</button>
+        <div class="labels">
+          <h4>Your score so far (lower is better):</h4>
+          <p id="score"></p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
